@@ -28,6 +28,23 @@ namespace SimonSays
         private void GameScreen_Load(object sender, EventArgs e)
         {
             //TODO: clear the pattern list from form1, refresh, pause for a bit, and run ComputerTurn()
+            Form1.game.Stop();
+            GraphicsPath greenPath = new GraphicsPath();
+            GraphicsPath redPath = new GraphicsPath();
+            GraphicsPath yellowPath = new GraphicsPath();
+            GraphicsPath bluePath = new GraphicsPath();
+            greenPath.AddEllipse(10, 10, 200, 200);
+            redPath.AddEllipse(-100, 10, 200, 200);
+            yellowPath.AddEllipse(10, -100, 200, 200);
+            bluePath.AddEllipse(-100, -100, 200, 200);
+            greenPath.AddEllipse(75, 75, 80, 80);
+            redPath.AddEllipse(-47, 75, 80, 80);
+            yellowPath.AddEllipse(75, -40, 80, 80);
+            bluePath.AddEllipse(-47, -40, 80, 80);
+            greenButton.Region = new Region(greenPath);
+            redButton.Region = new Region(redPath);
+            yellowButton.Region = new Region(yellowPath);
+            blueButton.Region = new Region(bluePath);
             Form1.Pattern.Clear();
             this.Refresh();
             Thread.Sleep(1000);
@@ -41,6 +58,7 @@ namespace SimonSays
             int CPU;
             CPU = randNum.Next(0, 4);
             Form1.Pattern.Add(CPU);
+
             //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
             for(int i = 0; i < Form1.Pattern.Count(); i++)
             {
