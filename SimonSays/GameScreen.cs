@@ -70,6 +70,7 @@ namespace SimonSays
                     Thread.Sleep(500);
                     greenButton.BackColor = Color.ForestGreen;
                     greenButton.Refresh();
+                    Thread.Sleep(200);
                 }
                 if(Form1.Pattern[i] == 1)
                 {
@@ -79,6 +80,7 @@ namespace SimonSays
                     Thread.Sleep(500);
                     redButton.BackColor = Color.DarkRed;
                     redButton.Refresh();
+                    Thread.Sleep(200);
                 }
                 if(Form1.Pattern[i] == 2)
                 {
@@ -88,6 +90,7 @@ namespace SimonSays
                     Thread.Sleep(500);
                     yellowButton.BackColor = Color.Goldenrod;
                     yellowButton.Refresh();
+                    Thread.Sleep(200);
                 }
                 if(Form1.Pattern[i] == 3)
                 {
@@ -97,6 +100,7 @@ namespace SimonSays
                     Thread.Sleep(500);
                     blueButton.BackColor = Color.DarkBlue;
                     blueButton.Refresh();
+                    Thread.Sleep(200);
                 }
                 
             }
